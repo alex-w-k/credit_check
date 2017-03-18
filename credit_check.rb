@@ -1,10 +1,10 @@
-def luhn(number)
+def luhn(card)
   sum = 0
   numbers = []
 
-  while number > 0
-    numbers << number % 10
-    number /= 10
+  while card > 0
+    numbers << card % 10
+    card /= 10
   end
 
   check = numbers.shift
@@ -37,5 +37,5 @@ end
 
 puts "What card do you want to check"
 input = gets.chomp
-card = input.to_i
-puts luhn(card)
+input = input.to_i
+puts luhn(input)
