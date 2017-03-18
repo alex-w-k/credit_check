@@ -1,8 +1,3 @@
-require "byebug"
-card_number = 4929735477250543
-
-valid = false
-
 def luhn(number)
   sum = 0
   numbers = []
@@ -40,10 +35,7 @@ def luhn(number)
 
 end
 
-
 puts "What card do you want to check"
 input = gets.chomp
 card = input.to_i
 puts luhn(card)
-
-
