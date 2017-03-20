@@ -1,3 +1,5 @@
+require "colorize"
+
 def luhn(card)
   sum = 0
   numbers = []
@@ -28,9 +30,9 @@ def luhn(card)
   end
 
   if (10 - (sum % 10)) == check || sum % 10 == 0
-    puts "Valid card!"
+    puts "Valid card!".green
   else
-    puts "Invalid card!"
+    puts "Invalid card!".red
   end
 
 end
